@@ -1,0 +1,5 @@
+"ID","Name","Latitude","Longitude","LocationDesc","GroupPathLocation","GroupPathLocationIDs","devices/Name","devices/PrimaryIPAddress","availabilitymfs/Value"
+668035,New York Data Center,40.7128,-74.006,"New York, NY",My Assigned Groups:All Groups:Site based Geo:New York Data Center,933:880:668032:668035,Cisco-3945_10.251.12.1,10.251.12.1,100.0
+668037,Seattle Remote Office,47.6062,-122.3321,"Seattle, WA",My Assigned Groups:All Groups:Site based Geo:Seattle Remote Office,933:880:668032:668037,Cisco-3945_10.251.29.10,10.251.29.10,100.0
+668039,San Diego Remote Office,32.8153,-117.134993,"San Diego, CA",My Assigned Groups:All Groups:Site based Geo:San Diego Remote Office,933:880:668032:668039,Cisco-3945_10.251.18.1,10.251.18.1,100.0
+668077,Denver Hub,39.7392,-104.9903,"Denver, CO",My Assigned Groups:All Groups:Site based Geo:Denver Hub,933:880:668032:668077,Cisco-3945_10.251.1.4,10.251.1.4,99.9039351940155
