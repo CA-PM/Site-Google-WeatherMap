@@ -78,7 +78,7 @@
                 url1="/pc/odata/api/groups?$apply=groupby(availabilitymfs/ID, aggregate(availabilitymfs(im_Availability with average as Value)))" + 
                 	"&$expand=devices" +
                 	"&$select=devices/Name,devices/PrimaryIPAddress,ID,Name,GroupPathLocationIDs,GroupPathLocation,Latitude,Longitude,LocationDesc" +
-                	"&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true))" +
+                	"&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true) and (MemberCount gt 0))" +
                 	"&starttime=" + getQueryVariable('startTime') + "&endtime=" + getQueryVariable('endTime') +
 	                "&resolution=HOUR" +
 	                "&$format=text/csv" +
@@ -156,7 +156,7 @@
                     icon="./images/pin_green.png";
                 }
 
-                locations[d.LocationDesc] = {
+                locations[d.Name] = {
                     name: d.Name,
                     id: d.ID,
                     info: {
