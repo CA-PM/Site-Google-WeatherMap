@@ -134,7 +134,7 @@
         devices.forEach(function(d) {
             if ((Number(d.Latitude) != 0) &&  (Number(d.Longitude) != 0)) {
                 var siteName=d.Name;
-               var thisUtilizationValue=Number(d['availabilitymfs/Value']);
+               var thisUtilizationValue=Number(d['portmfs/Value']);
                var icon;
                 // Since there can be multiple interfaces per site and hence multiple copies of the same site
                 // we need to de-duplicate the list to ensure we only have 1 of each device listed. 
@@ -156,7 +156,7 @@
                     icon="./images/pin_green.png";
                 }
                 else {
-                    icon="./images/pin_grey.png"
+                    icon="./images/pin_grey.png";
                 }
 
                 locations[d.Name] = {
