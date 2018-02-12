@@ -152,8 +152,11 @@
                     icon="./images/pin_orange.png";
                 }
 
-                else {
+                else if (thisUtilizationValue > 0) {
                     icon="./images/pin_green.png";
+                }
+                else {
+                    icon="./images/pin_grey.png"
                 }
 
                 locations[d.Name] = {
