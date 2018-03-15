@@ -11,7 +11,7 @@ Requires CAPM 3.5 based on Site based OpenAPI query aggregation needs.
 2. Populate the Longitude, Latitude, and Location Description for each site
 3. Add the appropriate interfaces and devices to their corresponding Site groups
 4. Create a new custom attribute on Interfaces named: ConnectsTo
-5. Populate that string with the Location Description of the Site which it connects to (see step 2)
+5. Populate that string with the Name of the Site which it connects to (see step 2)
 6. Wait for OpenAPI ETL process (15 minutes to 1 hour) 
 7. Download Application ZIP file from the GitHub repository
 8. Launch CAPC and access the Administration -> App Installer interface 
