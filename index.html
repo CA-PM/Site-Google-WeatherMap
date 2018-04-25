@@ -190,7 +190,7 @@
             name: d.Name,
             id: d.ID,
             interfaceName: d['interfaces/Name'],
-            sourceLat: locations[d['Name']].info.lat,
+            sourceLat: locations[d.Name].info.lat,
             sourceLong: locations[d['Name']].info.lng,
             destLat: locations[d['interfaces/ConnectsTo']].info.lat,
             destLong: locations[d['interfaces/ConnectsTo']].info.lng,
@@ -228,7 +228,7 @@
             var bounds = new google.maps.LatLngBounds();
             var pos;
             $.each(locations, function (index, location) {
-                pos = new google.maps.LatLng(location.info.lat, location.info.long); 
+                pos = new google.maps.LatLng(location.info.lat, location.info.lng); 
                 location.position = pos;
                 bounds.extend(pos);
             }); 
@@ -267,9 +267,9 @@
          var mapOptions = {
               styles: lightGreyTheme, //shadesOfGreyTheme, neutralBlueTheme, mostlyGreyScaleTheme, evenLighterTheme, lunarLandscapeTheme
               zoom: 4,
-              center: myLatLng,
+             // center: myLatLng,
               minZoom: 2,
-             //center: bounds.getCenter()
+             center: bounds.getCenter()
          };
 
 
