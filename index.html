@@ -286,7 +286,7 @@
 
         $.each(locations,function(d, markerss){
 
-            console.log("Placing marker for: name: " + markerss.name);
+            console.log("Placing marker for: name: " + markerss.Name);
 
             var marker = new google.maps.Marker({
                 position: markerss.info,
@@ -295,7 +295,7 @@
             });
 
             var contentString = 
-                '<p class="pair"><h3><span><a href="/pc/redirector?SourceType=262144&LocalID=' + markerss.id + '" target="_blank">' + markerss.name  + '</a></h3></span></p>' +
+                '<p class="pair"><h3><span><a href="/pc/redirector?SourceType=262144&LocalID=' + markerss.id + '" target="_blank">' + markerss.Name  + '</a></h3></span></p>' +
                 '<p class="pair"><span>Availability: </span><span>' + markerss.info.util + '</span></p>' +
                 '<p class="pair"><span>IP Address: </span><span>' + markerss.info.ipAddr + '</span></p>' +
                 '<p class="pair"><span>Location: </span><span>' + markerss.info.locDesc + '</span></p>' +

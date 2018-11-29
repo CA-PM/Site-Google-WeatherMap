@@ -1,6 +1,6 @@
 SimpleTrends
 
-Copyright (c) 2016 CA Technologies
+Copyright (c) 2018 CA Technologies
  
 The MIT License
 
