@@ -78,7 +78,7 @@
                 url1="/pc/odata/api/groups?$apply=groupby(portmfs/ID, aggregate(portmfs(im_Availability with average as Value)))" + 
                 	"&$expand=devices" +
                 	"&$select=devices/Name,devices/PrimaryIPAddress,ID,Name,GroupPathLocationIDs,GroupPathLocation,Latitude,Longitude,LocationDesc" +
-                    "&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true) and (MemberCount gt 0) and ((GroupType eq 'site') )" +
+                    "&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true) and (MemberCount gt 0) and (GroupType eq 'site') )" +
                 	"&starttime=" + getQueryVariable('startTime') + "&endtime=" + getQueryVariable('endTime') +
 	                "&resolution=HOUR" +
 	                "&$format=text/csv" +
