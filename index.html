@@ -78,7 +78,7 @@
                 url1="/pc/odata/api/groups?$apply=groupby(portmfs/ID, aggregate(portmfs(im_Availability with average as Value)))" + 
                 	"&$expand=devices" +
                 	"&$select=devices/Name,devices/PrimaryIPAddress,ID,Name,GroupPathLocationIDs,GroupPathLocation,Latitude,Longitude,LocationDesc" +
-                	"&$filter=((ID eq '" + getQueryVariable('id') + "') and (MemberCount gt 0))" +
+                    "&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true) and (MemberCount gt 0) and ((GroupType eq 'site') )" +
                 	"&starttime=" + getQueryVariable('startTime') + "&endtime=" + getQueryVariable('endTime') +
 	                "&resolution=HOUR" +
 	                "&$format=text/csv" +
@@ -102,7 +102,7 @@
                 	"im_UtilizationIn with average as Value1, im_PctDiscards with average as Value2, im_PctErrors with average as Value3, im_UtilizationOut with average as Value 4)))" +
                 	"&$expand=interfaces" +
                 	"&$select=ID,Name,Longitude,Latitude,LocationDesc,GroupPathLocation,interfaces/ID,interfaces/Name,interfaces/SpeedIn,interfaces/SpeedOut,interfaces/AlternateName,interfaces/ConnectsTo" +
-                	"&$filter=((ID eq '" + getQueryVariable('id') + "') and (MemberCount gt 0))" +
+                	"&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true) and (GroupType eq 'site'))" +
                 	"&$format=text/csv"
                 	"&starttime=" + getQueryVariable('startTime') + "&endtime=" + getQueryVariable('endTime') +
 	                "&resolution=HOUR" +
