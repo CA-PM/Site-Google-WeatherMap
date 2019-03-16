@@ -103,7 +103,7 @@
                 	"&$expand=interfaces" +
                 	"&$select=ID,Name,Longitude,Latitude,LocationDesc,GroupPathLocation,interfaces/ID,interfaces/Name,interfaces/SpeedIn,interfaces/SpeedOut,interfaces/AlternateName,interfaces/ConnectsTo" +
                 	"&$filter=((substringof('" + getQueryVariable('id') + ":', GroupPathLocationIDs) eq true) and (GroupType eq 'site'))" +
-                	"&$format=text/csv"
+                	"&$format=text/csv" +
                 	"&starttime=" + getQueryVariable('startTime') + "&endtime=" + getQueryVariable('endTime') +
 	                "&resolution=HOUR" +
 	                "&$format=text/csv" +
